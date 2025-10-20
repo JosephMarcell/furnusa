@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f5;
+  --foreground: #3c2415;
+  --primary: #7d5439;
+  --wood-primary: #7d5439;
+  --wood-secondary: #a67c5a;
+  --wood-accent: #d4b896;
+  --wood-light: #f0e6d6;
+  --wood-dark: #5d3e28;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+}
+
+/* Typography classes for furniture marketplace */
+.font-heading {
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: var(--font-source-sans), sans-serif;
+}
+
+/* Enhanced heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Button and UI element styles */
+button, .btn {
+  font-family: var(--font-source-sans), sans-serif;
+  font-weight: 500;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wood-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wood-primary);
+}
+
+/* Wood texture effect */
+.wood-texture {
+  background-image: 
+    linear-gradient(90deg, rgba(125, 84, 57, 0.1) 50%, transparent 50%),
+    linear-gradient(rgba(166, 124, 90, 0.1) 50%, transparent 50%);
+  background-size: 20px 20px, 20px 20px;
+}
+
+/* New gradient classes using wood color variables */
+.wood-gradient-primary {
+  background: linear-gradient(135deg, var(--wood-primary), var(--wood-secondary));
+}
+
+.wood-gradient-warm {
+  background: linear-gradient(135deg, var(--wood-light), var(--wood-accent));
+}
+
+.wood-gradient-light {
+  background: linear-gradient(135deg, #faf8f5, #f5f1eb);
+}
+
+/* AR Preview Video Slider Styles */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

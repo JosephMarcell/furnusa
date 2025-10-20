@@ -190,7 +190,7 @@ export default function ProductGrid() {
 
                 {/* Product Info */}
                 <div className="p-4">
-                  <h3 className="font-semibold mb-2 line-clamp-2 transition-colors" style={{color: 'var(--wood-dark)'}} onMouseEnter={(e) => e.target.style.color = 'var(--wood-primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--wood-dark)'}>
+                  <h3 className="font-semibold mb-2 line-clamp-2 transition-colors hover:text-[var(--wood-primary)]" style={{color: 'var(--wood-dark)'}}>
                     {product.name}
                   </h3>
                   

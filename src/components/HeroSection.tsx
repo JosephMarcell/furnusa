@@ -7,10 +7,10 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const images = [
-    { src: '/image/furnituy1.jpg', title: 'Furniture Berkualitas', subtitle: 'Handcrafted Premium Indonesia' },
-    { src: '/image/furnituy2.jpg', title: 'Meja Kayu Jati', subtitle: 'Tradisional & Modern' },
-    { src: '/image/furnituy3.jpg', title: 'Kursi Rotan', subtitle: 'Nyaman & Elegan' },
-    { src: '/image/furnituy4.jpg', title: 'Lemari Vintage', subtitle: 'Klasik & Berkelas' }
+    { src: '/image/gambar1.jpg', title: 'Furniture unik nusantara', subtitle: 'tradisional modern' },
+    { src: '/image/gambar2.jpg', title: 'Furniture kayu nusantara', subtitle: 'modern rattan furniture' },
+    { src: '/image/gambar3.jpg', title: 'Merchandise Cusion', subtitle: 'Bantal khas Kutai, Kalimatan Timur' },
+    { src: '/image/gambar4.jpg', title: 'Merchandise Cusion', subtitle: 'Bantal khas Bontang, Kalimatan Timur' }
   ];
 
   const nextSlide = () => {
@@ -32,7 +32,7 @@ export default function HeroSection() {
       <div 
         className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-15"
         style={{
-          backgroundImage: 'url(/image/furnituy1.jpg)',
+          backgroundImage: 'url(/image/gambar1.jpg)',
           backgroundPosition: 'center right'
         }}
       ></div>
@@ -44,15 +44,15 @@ export default function HeroSection() {
       <div className="absolute inset-0 wood-texture opacity-5"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-10 items-start">
           {/* Text Content */}
-          <div className="space-y-8 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+          <div className="space-y-6 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg lg:col-span-1 max-w-2xl lg:pr-4 xl:pr-6">
             <div>
-              <h1 className="font-heading text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="font-heading text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
                 Furniture Berkualitas
                 <span className="block" style={{color: 'var(--wood-accent)'}}>Nusantara</span>
               </h1>
-              <p className="text-xl lg:text-2xl opacity-90 mt-4">
+              <p className="text-2xl lg:text-3xl font-medium opacity-90 mt-4 leading-snug">
                 Marketplace furniture custom on demand dengan kualitas terbaik
               </p>
             </div>
@@ -92,9 +92,9 @@ export default function HeroSection() {
           </div>
           
           {/* Carousel */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <div className="relative h-96">
+          <div className="relative lg:col-span-2">
+            <div className="rounded-2xl overflow-hidden shadow-2xl mx-auto">
+              <div className="relative h-[45vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh]">
                 {images.map((image, index) => (
                   <div
                     key={index}

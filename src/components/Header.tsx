@@ -36,6 +36,12 @@ export default function Header() {
               Produk
             </Link>
             <Link 
+              href="/catalog" 
+              className="text-white hover:text-amber-200 transition-colors duration-200 font-medium"
+            >
+              Catalog
+            </Link>
+            <Link 
               href="/premium" 
               className="text-white hover:text-amber-200 transition-colors duration-200 font-medium"
             >
@@ -81,6 +87,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Produk
+              </Link>
+              <Link 
+                href="/catalog" 
+                className="block px-3 py-2 text-white hover:text-amber-200 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Catalog
               </Link>
               <Link 
                 href="/premium" 

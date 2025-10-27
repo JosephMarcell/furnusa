@@ -110,13 +110,13 @@ const sampleProducts: Product[] = [
 ];
 
 export default function ProductGrid() {
-  const [selectedCategory, setSelectedCategory] = useState('Semua');
+  const [selectedCategory, setSelectedCategory] = useState('Furniture');
   
-  const categories = ['Semua', 'Meja', 'Kursi', 'Lemari', 'Sofa', 'Rak', 'Tempat Tidur'];
+  const categories = ['Furniture', 'Merchandise'];
   
-  const filteredProducts = selectedCategory === 'Semua' 
+  const filteredProducts = selectedCategory === 'Furniture' 
     ? sampleProducts 
-    : sampleProducts.filter(product => product.category === selectedCategory);
+    : sampleProducts.filter(product => product.category === 'Merchandise');
 
 
 

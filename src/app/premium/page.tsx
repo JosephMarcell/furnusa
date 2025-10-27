@@ -15,41 +15,51 @@ export default function PremiumPage() {
         {/* Pricing Cards */}
         <div className="mb-16">
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Free Package */}
+            {/* Paket 1 — Basic Consultation */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-amber-200">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-amber-900 mb-2">Free</h3>
-                <div className="text-3xl font-bold text-amber-600 mb-2">Gratis</div>
-                <p className="text-amber-700">Konsultasi dasar</p>
+                <h3 className="text-2xl font-bold text-amber-900 mb-2">Paket 1 — Basic Consultation</h3>
+                <div className="text-3xl font-bold text-amber-600 mb-2">Rp 50.000</div>
+                <p className="text-amber-700">🕒 Durasi: 1 hari</p>
               </div>
-              
-              <ul className="space-y-3 mb-8">
+
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Konsultasi gratis 30 menit</span>
+                  <span className="text-amber-700">Konsultasi dasar (melalui chat/online)</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Saran desain dasar</span>
+                  <span className="text-amber-700">Saran desain awal sesuai kebutuhan</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Estimasi harga</span>
+                  <span className="text-amber-700">Estimasi biaya pembuatan furnitur</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Rekomendasi material</span>
+                  <span className="text-amber-700">Rekomendasi material dasar</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-amber-700">Akses e-catalog selama 1 bulan</span>
                 </li>
               </ul>
-              
+
+              <p className="text-sm text-amber-700 mb-6">
+                <span className="font-semibold">Cocok untuk:</span> Klien yang ingin konsultasi ringan sebelum masuk ke tahap desain 3D.
+              </p>
+
               <button className="w-full text-white font-semibold py-3 px-6 rounded-lg transition-opacity duration-200 hover:opacity-90" style={{backgroundColor: 'var(--primary)'}}>
                 Mulai Konsultasi
               </button>
@@ -64,44 +74,60 @@ export default function PremiumPage() {
               </div>
               
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-amber-900 mb-2">Paket2</h3>
+                <h3 className="text-2xl font-bold text-amber-900 mb-2">Paket 2 — Design & Consultation</h3>
                 <div className="text-3xl font-bold text-amber-600 mb-2">Rp 2.500.000</div>
-                <p className="text-amber-700">Desain & Konsultasi</p>
+                <p className="text-amber-700">🕒 Durasi pengerjaan: ±7–10 hari kerja</p>
               </div>
-              
-              <ul className="space-y-3 mb-8">
+
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Semua fitur Free</span>
+                  <span className="text-amber-700">Akses Semua fitur</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Desain 3D rendering</span>
+                  <span className="text-amber-700">Desain 3D rendering profesional (1 ruangan atau 1 set furnitur)</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">2x revisi desain</span>
+                  <span className="text-amber-700">3x revisi desain</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Gambar teknis detail</span>
+                  <span className="text-amber-700">Gambar teknis detail (ukuran, material, dan finishing)</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Konsultasi unlimited</span>
+                  <span className="text-amber-700">Jasa konsultasi intensif selama 1 minggu</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-amber-700">Garansi desain 6 bulan (jika ada perubahan kecil kebutuhan produksi)</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-amber-700">Akses e-catalog unlimited</span>
                 </li>
               </ul>
-              
+
+              <p className="text-sm text-amber-700 mb-6">
+                <span className="font-semibold">Cocok untuk:</span> Klien yang ingin hasil visual dan gambar teknis siap produksi.
+              </p>
+
               <button className="w-full text-white font-semibold py-3 px-6 rounded-lg transition-opacity duration-200 hover:opacity-90" style={{backgroundColor: 'var(--primary)'}}>
                 Pilih Paket
               </button>
@@ -110,44 +136,60 @@ export default function PremiumPage() {
             {/* Paket3 */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-amber-200">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-amber-900 mb-2">Paket3</h3>
+                <h3 className="text-2xl font-bold text-amber-900 mb-2">Paket 3 — Full Service Premium</h3>
                 <div className="text-3xl font-bold text-amber-600 mb-2">Rp 5.000.000</div>
-                <p className="text-amber-700">Full Service Premium</p>
+                <p className="text-amber-700">🕒 Durasi pengerjaan: ±2–3 minggu</p>
               </div>
-              
-              <ul className="space-y-3 mb-8">
+
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Semua fitur Paket2</span>
+                  <span className="text-amber-700">Akses Semua fitur</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Produksi furniture</span>
+                  <span className="text-amber-700">5x revisi desain tanpa biaya tambahan</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Material premium</span>
+                  <span className="text-amber-700">Pendampingan konsultasi selama 1 bulan (via chat/video call)</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Pengiriman & instalasi</span>
+                  <span className="text-amber-700">Garansi desain & gambar teknis selama 2 tahun</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-amber-700">Garansi 2 tahun</span>
+                  <span className="text-amber-700">Akses e-catalog gratis unlimited</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-amber-700">Prioritas antrian & layanan cepat</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-amber-700">Revisi minor gratis hingga masa garansi berakhir</span>
                 </li>
               </ul>
-              
+
+              <p className="text-sm text-amber-700 mb-6">
+                <span className="font-semibold">Cocok untuk:</span> Klien yang ingin hasil desain menyeluruh, profesional, dan layanan jangka panjang.
+              </p>
+
               <button className="w-full text-white font-semibold py-3 px-6 rounded-lg transition-opacity duration-200 hover:opacity-90" style={{backgroundColor: 'var(--primary)'}}>
                 Pilih Premium
               </button>

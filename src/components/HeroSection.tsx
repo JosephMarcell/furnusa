@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function HeroSection() {
@@ -21,11 +22,13 @@ export default function HeroSection() {
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // Auto-play carousel
+  // Auto-play carousel (menghindari dependensi fungsi)
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % images.length);
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
   return (
     <section className="relative bg-white overflow-hidden" style={{color: 'var(--wood-dark)'}}>
       {/* Background Image - Partial */}
@@ -74,21 +77,7 @@ export default function HeroSection() {
               </Link>
             </div>
             
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t" style={{borderColor: 'var(--wood-light)'}}>
-              <div className="text-center">
-                <div className="text-3xl font-bold" style={{color: 'var(--wood-accent)'}}>500+</div>
-                <div className="opacity-80">Produk</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold" style={{color: 'var(--wood-accent)'}}>1000+</div>
-                <div className="opacity-80">Pelanggan</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold" style={{color: 'var(--wood-accent)'}}>50+</div>
-                <div className="opacity-80">Pengrajin</div>
-              </div>
-            </div>
+            {/* Stats removed per request */}
           </div>
           
           {/* Carousel */}
@@ -102,11 +91,16 @@ export default function HeroSection() {
                       index === currentSlide ? 'opacity-100' : 'opacity-0'
                     }`}
                   >
-                    <img 
-                      src={image.src} 
-                      alt={image.title} 
-                      className="w-full h-full object-cover"
-                    />
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={image.src}
+                        alt={image.title}
+                        fill
+                        className="object-cover"
+                        sizes="100vw"
+                        priority={index === currentSlide}
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                     <div className="absolute bottom-6 left-6 text-white">
                       <h3 className="text-2xl font-bold mb-2">{image.title}</h3>

@@ -154,11 +154,11 @@ export default function ProductDetail() {
             </div>
 
             {/* Keunggulan (conditional) */}
-            {Array.isArray((product as any).features) && (product as any).features.length > 0 && (
+            {product.features && product.features.length > 0 && (
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-amber-900">Keunggulan</h3>
                 <ul className="space-y-2">
-                  {(product as any).features.map((feature: string, index: number) => (
+                  {product.features.map((feature: string, index: number) => (
                     <li key={index} className="flex items-center gap-2 text-amber-700">
                       <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -171,11 +171,11 @@ export default function ProductDetail() {
             )}
 
             {/* Spesifikasi (conditional) */}
-            {product && (product as any).specifications && (
+            {product.specifications && (
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-amber-900">Spesifikasi</h3>
                 <div className="bg-white rounded-lg p-4 space-y-3">
-                  {Object.entries((product as any).specifications as Record<string, string>).map(([key, value]) => (
+                  {Object.entries(product.specifications).map(([key, value]) => (
                     <div key={key} className="flex justify-between border-b border-amber-100 pb-2">
                       <span className="font-medium text-amber-800">{key}</span>
                       <span className="text-amber-700">{value}</span>

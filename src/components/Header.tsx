@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -12,12 +13,17 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{backgroundColor: 'var(--primary)'}}>
-              <span className="text-white font-bold text-xl">F</span>
-            </div>
+            <Image
+              src="/logo/logo.png"
+              alt="Furnusa Logo"
+              width={40}
+              height={40}
+              priority
+              className="w-10 h-10 object-contain rounded-lg"
+            />
             <div className="text-white">
               <h1 className="font-heading text-xl font-bold">FURNUSA</h1>
-              <p className="font-body text-xs opacity-80">Furniture Nusantara</p>
+              <p className="font-body text-xs opacity-80">Cultural Harmony</p>
             </div>
           </Link>
 

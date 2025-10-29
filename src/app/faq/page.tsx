@@ -10,15 +10,11 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question: "Apa itu FURNUSA?",
-    answer: "FURNUSA (Furniture Nusantara) adalah marketplace furniture online yang menyediakan berbagai macam furniture berkualitas tinggi dengan desain khas Nusantara. Kami menghubungkan pengrajin terbaik Indonesia dengan pelanggan yang mencari furniture berkualitas."
+    answer: "FURNUSA (Furniture Nusantara) adalah marketplace jasa desain furniture online yang menyediakan berbagai macam furniture dengan desain khas Nusantara. Kami mengedukasi dan mewujudkan furnitur Nusantara impianmu."
   },
   {
     question: "Bagaimana cara memesan furniture di FURNUSA?",
     answer: "Anda dapat memesan furniture dengan cara: 1) Pilih produk yang diinginkan, 2) Klik 'Beli Sekarang' atau 'Tambah ke Keranjang', 3) Isi data pengiriman, 4) Pilih metode pembayaran, 5) Konfirmasi pesanan. Tim kami akan menghubungi Anda untuk konfirmasi lebih lanjut."
-  },
-  {
-    question: "Apakah furniture di FURNUSA original dan berkualitas?",
-    answer: "Ya, semua furniture di FURNUSA adalah original dan dibuat oleh pengrajin berpengalaman. Kami melakukan kurasi ketat terhadap setiap penjual dan produk untuk memastikan kualitas terbaik. Setiap produk juga dilengkapi dengan garansi."
   },
   {
     question: "Berapa lama waktu pengiriman?",
@@ -34,7 +30,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Apa itu layanan Premium FURNUSA?",
-    answer: "Layanan Premium adalah layanan custom design furniture sesuai kebutuhan dan keinginan Anda. Meliputi konsultasi gratis, pembuatan desain 3D, pemilihan material premium, dan pengerjaan oleh master craftsman. Cocok untuk proyek interior khusus."
+    answer: "Layanan Premium adalah layanan custom design furniture sesuai kebutuhan dan keinginan Anda. Meliputi konsultasi gratis, pembuatan desain 3D dengan rekomendasi material. Cocok untuk proyek interior khusus."
   },
   {
     question: "Metode pembayaran apa saja yang tersedia?",

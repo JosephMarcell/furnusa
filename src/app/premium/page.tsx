@@ -203,38 +203,38 @@ export default function PremiumPage() {
             Proses Pemesanan Premium
           </h2>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" style={{backgroundColor: 'var(--primary)'}}>
                 1
               </div>
-              <h3 className="font-semibold text-amber-900 mb-2">Konsultasi</h3>
-              <p className="text-amber-700 text-sm">Diskusi kebutuhan dan preferensi desain</p>
+              <h3 className="font-semibold text-amber-900 mb-2">Pilih Paket Premium</h3>
+              <p className="text-amber-700 text-sm">Memilih paket premium yang mau dibeli sesuai kebutuhan</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" style={{backgroundColor: 'var(--primary)'}}>
                 2
               </div>
-              <h3 className="font-semibold text-amber-900 mb-2">Desain</h3>
-              <p className="text-amber-700 text-sm">Pembuatan sketsa dan 3D rendering</p>
+              <h3 className="font-semibold text-amber-900 mb-2">Bayar & Upload Bukti</h3>
+              <p className="text-amber-700 text-sm">Bayar paket dan upload bukti pembayaran untuk verifikasi</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" style={{backgroundColor: 'var(--primary)'}}>
                 3
               </div>
-              <h3 className="font-semibold text-amber-900 mb-2">Produksi</h3>
-              <p className="text-amber-700 text-sm">Pengerjaan oleh craftsman berpengalaman</p>
+              <h3 className="font-semibold text-amber-900 mb-2">Akses Layanan Paket</h3>
+              <p className="text-amber-700 text-sm">Akses seluruh layanan paket: desain 3D render, contoh portofolio perusahaan, dan katalog untuk edukasi & bisnis sesuai langganan</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" style={{backgroundColor: 'var(--primary)'}}>
-                4
-              </div>
-              <h3 className="font-semibold text-amber-900 mb-2">Pengiriman</h3>
-              <p className="text-amber-700 text-sm">Instalasi dan finishing di lokasi</p>
-            </div>
+          </div>
+
+          {/* Note Section */}
+          <div className="mt-10 bg-amber-50 border rounded-xl p-6" style={{borderColor: 'var(--wood-light)'}}>
+            <h3 className="font-semibold text-amber-900 mb-2">Catatan Penting</h3>
+            <p className="text-amber-800 text-sm">
+              Pembelian dan akses premium berbeda: pembeli bisa dari kalangan premium atau bukan. Setiap pembelian akan diberi desain 3D, gambar kerja, kisaran RAB, dan rekomendasi material.
+            </p>
           </div>
         </div>
 

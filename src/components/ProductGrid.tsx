@@ -1,113 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  originalPrice?: string;
-  seller: string;
-  rating: number;
-  reviews: number;
-  image: string;
-  category: string;
-  isNew?: boolean;
-  discount?: string;
-}
-
-const sampleProducts: Product[] = [
-  {
-    id: 1,
-    name: "Meja Makan Kayu Jati Minimalis",
-    price: "Rp 3.500.000",
-    originalPrice: "Rp 4.200.000",
-    seller: "Furniture Jepara",
-    rating: 4.8,
-    reviews: 124,
-    image: "/api/placeholder/300/300",
-    category: "Meja",
-    isNew: true,
-    discount: "17%"
-  },
-  {
-    id: 2,
-    name: "Kursi Rotan Anyaman Tradisional",
-    price: "Rp 850.000",
-    seller: "Kerajinan Nusantara",
-    rating: 4.6,
-    reviews: 89,
-    image: "/api/placeholder/300/300",
-    category: "Kursi"
-  },
-  {
-    id: 3,
-    name: "Lemari Pakaian Vintage 3 Pintu",
-    price: "Rp 5.200.000",
-    originalPrice: "Rp 6.000.000",
-    seller: "Antique Wood",
-    rating: 4.9,
-    reviews: 67,
-    image: "/api/placeholder/300/300",
-    category: "Lemari",
-    discount: "13%"
-  },
-  {
-    id: 4,
-    name: "Sofa Minimalis 3 Dudukan",
-    price: "Rp 4.800.000",
-    seller: "Modern Living",
-    rating: 4.7,
-    reviews: 156,
-    image: "/api/placeholder/300/300",
-    category: "Sofa",
-    isNew: true
-  },
-  {
-    id: 5,
-    name: "Rak Buku Kayu Mahoni",
-    price: "Rp 1.200.000",
-    seller: "Woodcraft Studio",
-    rating: 4.5,
-    reviews: 43,
-    image: "/api/placeholder/300/300",
-    category: "Rak"
-  },
-  {
-    id: 6,
-    name: "Meja Kerja Industrial Style",
-    price: "Rp 2.800.000",
-    originalPrice: "Rp 3.200.000",
-    seller: "Urban Furniture",
-    rating: 4.8,
-    reviews: 92,
-    image: "/api/placeholder/300/300",
-    category: "Meja",
-    discount: "12%"
-  },
-  {
-    id: 7,
-    name: "Tempat Tidur Kayu Solid Queen",
-    price: "Rp 6.500.000",
-    seller: "Bedroom Essentials",
-    rating: 4.9,
-    reviews: 78,
-    image: "/api/placeholder/300/300",
-    category: "Tempat Tidur"
-  },
-  {
-    id: 8,
-    name: "Kursi Bar Tinggi Modern",
-    price: "Rp 650.000",
-    seller: "Bar Furniture Co",
-    rating: 4.4,
-    reviews: 35,
-    image: "/api/placeholder/300/300",
-    category: "Kursi",
-    isNew: true
-  }
-];
+import { sampleProducts } from '@/data/products';
 
 export default function ProductGrid() {
   const [selectedCategory, setSelectedCategory] = useState('Furniture');
@@ -115,7 +12,7 @@ export default function ProductGrid() {
   const categories = ['Furniture', 'Merchandise'];
   
   const filteredProducts = selectedCategory === 'Furniture' 
-    ? sampleProducts 
+    ? sampleProducts.filter(product => product.category !== 'Merchandise')
     : sampleProducts.filter(product => product.category === 'Merchandise');
 
 
@@ -165,12 +62,13 @@ export default function ProductGrid() {
               <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:scale-105">
                 {/* Product Image */}
                 <div className="relative aspect-square wood-gradient-warm">
-                  {/* Placeholder for product image */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <svg className="w-24 h-24" style={{color: 'var(--wood-primary)'}} fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                    </svg>
-                  </div>
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
                   
                   {/* Badges */}
                   <div className="absolute top-3 left-3 flex flex-col gap-2">
